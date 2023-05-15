@@ -1,0 +1,1 @@
+web: gunicorn vivapro1.wsgi --log-file -

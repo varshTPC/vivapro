@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} PLAY {% endblock title %}
+{% block css %}
+
+{% endblock css %}
+
+{% block navbar %}
+    <nav class="nav nav-masthead justify-content-center float-md-end">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link active" aria-current="page" href="play">Play</a>
+    <a class="nav-link" href="contact">Contact</a>
+    </nav>
+{% endblock navbar %}
+
+{% block content %}
+    {% comment %} <embed name="GoodEnough" src="C:\Users\Arjun\Desktop\mp3\love.mp3" loop="true" hidden="true" autostart="true"> {% endcomment %}
+    {% comment %} <bgsound src = "C:\Users\Arjun\Desktop\mp3\love.mp3"/> {% endcomment %}
+    <main class="form-signin">
+        <form action="result" method="post">
+        {% csrf_token %}
+        <!-- <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+        <h1 class="my-2">Check your "Destiny"</h1>
+    
+        <div class="form-floating">
+            <input type="text" class="form-control my-3" id="floatingInput" placeholder="Name1" name="name1">
+            <label style="color: black;" for="floatingInput">Your Name</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control my-3" id="floatingPassword" placeholder="Name2" name="name2">
+            <label style="color: black;" for="floatingPassword">Their Name</label>
+        </div>
+    
+        <button style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" class="w-100 btn btn-lg btn-light" type="submit">Reveal</button>
+        </form>
+  </main>
+{% endblock content %}
